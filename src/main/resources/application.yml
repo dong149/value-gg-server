@@ -1,0 +1,26 @@
+spring:
+  config:
+    activate:
+      on-profile:
+        - default
+        - local
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/value_gg?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: smith1380!
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile:
+        - production
